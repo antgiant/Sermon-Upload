@@ -1,0 +1,76 @@
+#===========================================================
+#
+# MED file mode definition file (www.med-editor.com)
+# for AutoHotkey (www.autohotkey.com)
+# by Wolfgang Reszel (Tekl)
+#
+#===========================================================
+
+files: *.ahk	|^[^:]+:[\t ]*Send[\t ]+,	100
+title: AutoHotkey
+
+related: *.ini
+suffixIsRegexp: no
+default: no
+caseSensitive: no
+checkCommentInString: yes
+shiftDistance: 3
+tabWidth: 3
+tabLoadExpand: 1
+tabInsAsBlank: 1
+
+sectionRegexp: ^(;-)?[ \t]*(:[^ \t:;,]*)?:*[ \t]*[^ \t:;,]+( +& +)?[^ \t:;,]*::?.*$
+sectionDisplayRegexp: ^;?-?[ \t]*(:?[^\t:;,]*:?[^\t:;,]+):+[\t ]*;? *(.*)$
+sectionBrowserOrder: 1 2
+sectionDisplayOrder: 1 2
+sectionBrowserMainKey: 1
+wordWrap: disabled 76 >!:~#
+
+wordSep:'&(){}\<>,;-+*.:?!=-|"%
+
+# 3rd party online help
+# NOTE: The pipe in the below (inside "Program Files") is required (it equals the space character).
+inf: * C:\Program|Files\AutoHotkey\AutoHotkey.chm * AutoHotKey|Help
+
+# brackets
+bracket: { } 1
+bracket: : Return 1
+bracket: /* */ 1
+bracket: ( ) 1
+
+# Color definitions
+defineColor: myOrange 230 115 0
+defineColor: myDarkGray 89 89 89
+
+foregroundColor: black
+backgroundColor: white
+blockColor: palegray
+
+# Comments
+color: myOrange, normal, myOrange, normal
+eolCom: ;
+comCol: 0
+
+# Symbols
+
+color: darkgreen, normal, black, normal
+string: "
+
+color: darkred, normal, black, normal
+char: %
+
+color: blue, normal, black, normal
+literal: `
+
+color: darkcyan, normal, black, normal
+decPrefix:
+
+color: blue, normal, black, normal
+hexPrefix: 0x
+
+color: darkcyan, normal, black, normal
+symbol: ,:{}[]=-/
+color: darkgreen, normal, black, normal
+symbol: $^#!+<>*~
+
+# Reserved words
